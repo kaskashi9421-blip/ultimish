@@ -1,0 +1,9 @@
+<h2>Admin Panel</h2>
+
+{% for sub in subs %}
+<div>
+  <p>{{ sub.ultimish_word }} → {{ sub.suggested_translation }}</p>
+  <a href="/approve/{{ sub.id }}/">Approve</a>
+  <a href="/reject/{{ sub.id }}/">Reject</a>
+</div>
+{% endfor %}

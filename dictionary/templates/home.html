@@ -1,0 +1,23 @@
+<h1>Ultimish Dictionary</h1>
+
+{% if role == 'admin' %}
+<a href="/admin-panel/">Admin Panel</a>
+{% endif %}
+
+<a href="/submit/">Submit Word</a>
+
+<table border="1">
+<tr>
+<th>Serial</th>
+<th>Ultimish</th>
+<th>English</th>
+</tr>
+
+{% for word in words %}
+<tr>
+<td>{{ word.serial_number }}</td>
+<td>{{ word.ultimish_word }}</td>
+<td>{{ word.english_translation }}</td>
+</tr>
+{% endfor %}
+</table>

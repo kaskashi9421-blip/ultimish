@@ -1,0 +1,6 @@
+<h2>Enter Password</h2>
+<form method="POST">
+  {% csrf_token %}
+  <input type="password" name="password" placeholder="Enter password">
+  <button type="submit">Enter</button>
+</form>
